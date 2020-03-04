@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/linerLayout">
+
+
+    <LinearLayout
+        android:id="@+id/lay0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calendar"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay0"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/prevMonthBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_arrow_left"
+            android:layout_weight="0"
+            />
+        <TextView
+            android:id="@+id/monthYearTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="December 2016"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            />
+        <TextView
+            android:id="@+id/nextMonthBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_arrow_right"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/lay1"
+        >
+        <GridView
+            android:id="@+id/weekGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:numColumns="7"
+            android:padding="5dp"
+            />
+
+        <GridView
+            android:id="@+id/dayGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:numColumns="7"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/lay2"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVENT"
+            android:textSize="20dp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/showAllEventsTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show All"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="right"
+            android:layout_gravity="right"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/eventsCalList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_below="@id/lay3"
+        />
+
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/colorPrimary"
+
+
+        />
+
+</RelativeLayout>
